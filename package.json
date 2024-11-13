@@ -1,0 +1,30 @@
+{
+  "name": "cookies_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "playwright test --ui",
+    "test": "playwright test",
+    "test:headed": "npx playwright test tests/example.spec.ts --headed",
+    "test:m:headed": "npx playwright test tests/mobile.example.spec.ts --headed",
+    "test:api": "npx playwright test tests/api.example.spec.ts --headed",
+    "test:debug": "npx playwright test tests/example.spec.ts --debug",
+    "report:generate": "allure generate allure-results -o allure-report --clean",
+    "report:open": "allure open",
+    "test:acc": "npx playwright test tests/accessibility.scan.spec.ts --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.9.0",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^2.15.1",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "axe-core": "^4.10.2"
+  }
+}
